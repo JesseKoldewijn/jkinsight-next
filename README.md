@@ -4,6 +4,9 @@
   <a href="#" target="_blank">
     <img alt="License: UNLICENCED" src="https://img.shields.io/badge/License-UNLICENCED-yellow.svg" />
   </a>
+  <a href="https://github.com/JesseKoldewijn/jkinsight-next/actions/workflows/workspace-ci.yml">
+    <img src="https://github.com/JesseKoldewijn/jkinsight-next/actions/workflows/workspace-ci.yml/badge.svg?branch=main"/>
+  </a>
 </p>
 
 > This will be the new and improved website for the jkinsight.nl domain.
@@ -24,9 +27,9 @@ pnpm run dev
 
 👤 **Jesse Koldewijn**
 
--   Website: https://jkinsight.nl
--   Github: [@JesseKoldewijn](https://github.com/JesseKoldewijn)
--   LinkedIn: [@jesse-koldewijn-5914531a3](https://linkedin.com/in/jesse-koldewijn-5914531a3)
+- Website: https://jkinsight.nl
+- Github: [@JesseKoldewijn](https://github.com/JesseKoldewijn)
+- LinkedIn: [@jesse-koldewijn-5914531a3](https://linkedin.com/in/jesse-koldewijn-5914531a3)
 
 ## Show your support
 
