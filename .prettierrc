@@ -10,5 +10,5 @@
     "prettier-plugin-tailwindcss",
     "prettier-plugin-package-perfection"
   ],
-  "tailwindConfig": "./tailwind.config.ts"
+  "tailwindConfig": "./tailwind.config.cjs"
 }
