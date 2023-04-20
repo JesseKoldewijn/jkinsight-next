@@ -22,7 +22,9 @@ export default function RootLayout({
       <body>
         <ThemeChange />
         <Navbar />
-        <main className="min-h-screen">{children}</main>
+        <main id="page-content" className="min-h-screen">
+          {children}
+        </main>
       </body>
     </html>
   );

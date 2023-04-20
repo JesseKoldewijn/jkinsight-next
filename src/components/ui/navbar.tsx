@@ -35,7 +35,7 @@ const Navbar = () => {
         <LinkComponent Href="/" Title="Quark JKinsight" variantPlain />
       </div>
       <div className="navbar-center flex">
-        <LinkComponent Href="/messages-board" Title="Messages" />
+        <LinkComponent Href="/about" Title="About me" />
       </div>
       <div className="navbar-end flex">
         <ThemeSwitch />
