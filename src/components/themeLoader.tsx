@@ -3,11 +3,11 @@
 import { useEffect } from "react";
 import { themeChange } from "theme-change";
 
-const ThemeChange = () => {
+const ThemeLoader = () => {
   useEffect(() => {
     themeChange(false);
   }, []);
   return <></>;
 };
 
-export default ThemeChange;
+export default ThemeLoader;
