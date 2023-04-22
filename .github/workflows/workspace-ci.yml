@@ -38,6 +38,12 @@ jobs:
         shell: bash
         run: pnpm install
 
+      - name: Lint
+        shell: bash
+        run: pnpm run lint
+
       - name: Build
         shell: bash
         run: pnpm run build
+        env:
+          SKIP_ENV_VALIDATION: true
