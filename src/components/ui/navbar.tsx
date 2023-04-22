@@ -19,8 +19,8 @@ const Navbar = () => {
           href={Href}
           className={
             variantPlain !== true
-              ? "my-auto rounded-lg border-2 border-purple-600 bg-transparent px-2 py-1 font-extrabold text-black dark:text-white"
-              : "my-auto font-extrabold text-black dark:text-white"
+              ? "my-auto rounded-xl border-2 border-stone-800 bg-transparent px-2 py-1 font-extrabold text-black shadow-lg dark:border-stone-700 dark:text-white"
+              : "my-auto rounded-lg font-extrabold text-black dark:text-white"
           }
         >
           {Title}
@@ -30,9 +30,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex w-full bg-gray-200 px-2 py-3 dark:bg-black">
+    <div className="fixed inset-x-0 top-0 flex w-full bg-[rgba(200,200,200,0.75)] px-2 py-3 dark:bg-[rgba(0,0,0,0.75)]">
       <div className="navbar-start flex">
-        <LinkComponent Href="/" Title="Quark JKinsight" variantPlain />
+        <LinkComponent Href="/" Title="JKinsight" variantPlain />
       </div>
       <div className="navbar-center flex">
         <LinkComponent Href="/about" Title="About me" />

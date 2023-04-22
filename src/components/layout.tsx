@@ -1,17 +1,18 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { motion } from "framer-motion";
 
-import Navbar from "./ui/navbar"
-import ThemeLoader from "./themeLoader"
+import Navbar from "./ui/navbar";
+import ThemeLoader from "./themeLoader";
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: { children: any }) => {
   return (
     <motion.div
-      initial={{ x: 300, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      exit={{ x: 300, opacity: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       transition={{
         type: "spring",
-        stiffness: 260,
+        stiffness: 280,
         damping: 20,
       }}
     >

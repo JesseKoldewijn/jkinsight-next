@@ -1,22 +1,24 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 
-const Home: NextPage = () => {
+const About: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Home | JKinsight</title>
+        <title>About | JKinsight</title>
         <meta
           name="description"
           content="Welcome to JKinsight - My personal portfolio website!"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen flex-col items-center justify-center">
-        Homepage
+      <main >
+        <div className="flex min-h-screen flex-col items-center justify-center">
+          About me!
+        </div>
       </main>
     </>
   );
 };
 
-export default Home;
+export default About;

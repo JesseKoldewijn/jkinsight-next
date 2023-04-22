@@ -29,7 +29,7 @@ const ThemeSwitch = () => {
               : "night",
           );
         }}
-        className="rounded-full border-2 border-purple-800 bg-black bg-clip-text px-2 py-2 font-extrabold text-purple-800 dark:border-purple-600 dark:text-white"
+        className="rounded-full border-2 border-stone-800 bg-black bg-clip-text px-2 py-2 font-extrabold text-black dark:border-stone-600 dark:text-white"
       >
         {currentTheme !== null && currentTheme == "corporate" ? (
           <Moon />
