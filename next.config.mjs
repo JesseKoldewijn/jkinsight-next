@@ -21,32 +21,6 @@ const withPWA = NextPWA({
 const config = {
   reactStrictMode: true,
   swcMinify: true,
-  async headers() {
-    return [
-      {
-        // Sets security headers for all routes
-        source: "/(.*)",
-        headers: [
-          {
-            key: "Content-Security-Policy",
-            value:
-              "default-src 'self'; script-src 'report-sample' 'self'; style-src 'report-sample' 'self'; object-src 'none'; base-uri 'self'; connect-src 'self'; font-src 'self'; frame-src 'self'; img-src 'self'; manifest-src 'self'; media-src 'self'; report-uri https://644676edf1e3671a29137801.endpoint.csper.io/?v=0; worker-src 'self';",
-          },
-        ],
-      },
-      {
-        // Sets security headers for everything?
-        source: "/*",
-        headers: [
-          {
-            key: "Content-Security-Policy",
-            value:
-              "default-src 'self'; script-src 'report-sample' 'self'; style-src 'report-sample' 'self'; object-src 'none'; base-uri 'self'; connect-src 'self'; font-src 'self'; frame-src 'self'; img-src 'self'; manifest-src 'self'; media-src 'self'; report-uri https://644676edf1e3671a29137801.endpoint.csper.io/?v=0; worker-src 'self';",
-          },
-        ],
-      },
-    ];
-  },
   /**
    * If you have `experimental: { appDir: true }` set, then you must comment the below `i18n` config
    * out.

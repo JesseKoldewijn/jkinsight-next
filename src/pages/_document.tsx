@@ -8,7 +8,7 @@ const RootDocument = () => {
       className="transition-all duration-500 ease-in-out"
     >
       <Head>
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/favicon.ico" />
         <meta name="application-name" content="JKinsight" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <meta name="theme-color" content="#0f172a" />
