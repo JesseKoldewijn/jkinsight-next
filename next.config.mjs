@@ -34,6 +34,17 @@ const config = {
           },
         ],
       },
+      {
+        // Sets security headers for everything?
+        source: "*",
+        headers: [
+          {
+            key: "Content-Security-Policy",
+            value:
+              "default-src 'self'; script-src 'report-sample' 'self'; style-src 'report-sample' 'self'; object-src 'none'; base-uri 'self'; connect-src 'self'; font-src 'self'; frame-src 'self'; img-src 'self'; manifest-src 'self'; media-src 'self'; report-uri https://644676edf1e3671a29137801.endpoint.csper.io/?v=0; worker-src 'self';",
+          },
+        ],
+      },
     ];
   },
   /**
