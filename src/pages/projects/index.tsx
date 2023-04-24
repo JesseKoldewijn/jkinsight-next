@@ -26,11 +26,13 @@ const About: NextPage = () => {
       <main>
         <div className="flex min-h-screen flex-col items-center justify-center">
           <h2 className="text-xl font-semibold">Projects</h2>
-          <Suspense fallback={<>Fetching projects...</>}>
-            {projects.data?.map((projectItem) => {
+          {projects.data ? (
+            projects.data?.map((projectItem) => {
               return <span key={projectItem.id}>{projectItem.title}</span>;
-            })}
-          </Suspense>
+            })
+          ) : (
+            <>Fetching projects...</>
+          )}
         </div>
       </main>
     </>
