@@ -36,7 +36,7 @@ const config = {
       },
       {
         // Sets security headers for everything?
-        source: "*",
+        source: "/*",
         headers: [
           {
             key: "Content-Security-Policy",
