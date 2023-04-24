@@ -6,6 +6,9 @@ import { api } from "@/utils/api";
 
 export const config = {
   runtime: "experimental-edge",
+  unstable_allowDynamic: [
+    "/node_modules/.pnpm/**", // use a glob to allow anything in the function-bind 3rd party module
+  ],
 };
 
 const About: NextPage = () => {
@@ -23,14 +26,10 @@ const About: NextPage = () => {
       <main>
         <div className="flex min-h-screen flex-col items-center justify-center">
           <h2 className="text-xl font-semibold">Projects</h2>
-          <Suspense>
-            {projects.data ? (
-              projects.data.map((projectItem) => {
-                return <span key={projectItem.id}>{projectItem.title}</span>;
-              })
-            ) : (
-              <></>
-            )}
+          <Suspense fallback={<>Fetching projects...</>}>
+            {projects.data?.map((projectItem) => {
+              return <span key={projectItem.id}>{projectItem.title}</span>;
+            })}
           </Suspense>
         </div>
       </main>
