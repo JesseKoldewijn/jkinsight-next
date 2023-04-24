@@ -34,7 +34,8 @@ const Navbar = () => {
       <div className="navbar-start flex">
         <LinkComponent Href="/" Title="JKinsight" variantPlain />
       </div>
-      <div className="navbar-center flex">
+      <div className="navbar-center flex gap-2">
+        <LinkComponent Href="/projects" Title="Projects" />
         <LinkComponent Href="/about" Title="About me" />
       </div>
       <div className="navbar-end flex">

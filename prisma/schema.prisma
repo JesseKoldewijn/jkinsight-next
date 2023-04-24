@@ -6,13 +6,14 @@ generator client {
 }
 
 datasource db {
-    provider = "sqlite"
-    url      = env("DATABASE_URL")
+    provider     = "mysql"
+    url          = env("DATABASE_URL")
+    relationMode = "prisma"
 }
 
 model Project {
     id          String   @id @default(cuid())
-    title       String   @default("Not set")
+    title       String   @unique
     description String   @default("Not set")
     createdAt   DateTime @default(now())
     updatedAt   DateTime @updatedAt

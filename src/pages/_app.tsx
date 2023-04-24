@@ -16,7 +16,7 @@ const RootApp = ({
   pageProps: any;
 }) => {
   const router = useRouter();
-  
+
   return (
     <AnimatePresence mode="wait" initial={false}>
       <Layout key={router.asPath}>

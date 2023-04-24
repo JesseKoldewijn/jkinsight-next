@@ -1,15 +1,19 @@
+import { Suspense } from "react";
 import { type NextPage } from "next";
 import Head from "next/head";
+
+import { api } from "@/utils/api";
 
 export const config = {
   runtime: "experimental-edge",
 };
 
 const About: NextPage = () => {
+  const projects = api.projects.getAll.useQuery();
   return (
     <>
       <Head>
-        <title>About | JKinsight</title>
+        <title>Projects | JKinsight</title>
         <meta
           name="description"
           content="Welcome to JKinsight - My personal portfolio website!"
@@ -18,11 +22,19 @@ const About: NextPage = () => {
       </Head>
       <main>
         <div className="flex min-h-screen flex-col items-center justify-center">
-          About me!
+          <h2 className="text-xl font-semibold">Projects</h2>
+          <Suspense>
+            {projects.data ? (
+              projects.data.map((projectItem) => {
+                return <span key={projectItem.id}>{projectItem.title}</span>;
+              })
+            ) : (
+              <></>
+            )}
+          </Suspense>
         </div>
       </main>
     </>
   );
 };
-
 export default About;

@@ -1,6 +1,10 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 
+export const config = {
+  runtime: "experimental-edge",
+};
+
 const Home: NextPage = () => {
   return (
     <>
@@ -18,5 +22,4 @@ const Home: NextPage = () => {
     </>
   );
 };
-
 export default Home;
