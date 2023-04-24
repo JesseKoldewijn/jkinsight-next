@@ -10,7 +10,6 @@ const Home: NextPage = () => {
           name="description"
           content="Welcome to JKinsight - My personal portfolio website!"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-center">
         Homepage
