@@ -34,6 +34,7 @@ const ThemeSwitch = () => {
         ) : (
           <Sun />
         )}
+        <span className="sr-only">Theme-toggle</span>
       </button>
     </>
   );
