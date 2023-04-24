@@ -30,7 +30,7 @@ const config = {
     ],
     "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
   },
-  ignorePattern: ["next.config.js"]
+  ignorePatterns: ["next.config.js"]
 };
 
 module.exports = config;
