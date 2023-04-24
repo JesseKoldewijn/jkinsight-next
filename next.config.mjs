@@ -10,8 +10,6 @@ import NextPWA from "next-pwa";
 // @ts-ignore
 import runtimeCaching from "next-pwa/cache.js";
 
-const remoteURL = "https://jkinsight-next.vercel.app";
-
 const withPWA = NextPWA({
   disable: process.env.NODE_ENV === "development",
   dest: "public",
