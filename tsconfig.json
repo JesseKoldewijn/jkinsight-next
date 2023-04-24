@@ -28,7 +28,8 @@
     "**/*.tsx",
     "**/*.cjs",
     "**/*.mjs",
-    "tailwind.config.cjs"
+    "tailwind.config.cjs",
+    "src/utils/next-pwa/caching.js"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "next.config.js"]
 }
