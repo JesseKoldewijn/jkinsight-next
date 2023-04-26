@@ -2,7 +2,7 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@prisma/client':
-    specifier: ^4.13.0
+    specifier: 4.13.0
     version: 4.13.0(prisma@4.13.0)
   '@radix-ui/react-context-menu':
     specifier: ^2.1.3

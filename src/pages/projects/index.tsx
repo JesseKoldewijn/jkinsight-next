@@ -2,6 +2,13 @@ import { type NextPage } from "next";
 import Head from "next/head";
 
 import { api } from "@/utils/api";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/layout/card";
 
 export const config = {
   runtime: "experimental-edge",
@@ -12,6 +19,7 @@ export const config = {
 
 const About: NextPage = () => {
   const projects = api.projects.getAll.useQuery();
+
   return (
     <>
       <Head>
@@ -23,15 +31,34 @@ const About: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="flex min-h-screen flex-col items-center justify-center">
+        <div className="flex min-h-screen flex-col items-center justify-center gap-4">
           <h2 className="text-xl font-semibold">Projects</h2>
-          {projects.data ? (
-            projects.data?.map((projectItem) => {
-              return <span key={projectItem.id}>{projectItem.title}</span>;
-            })
-          ) : (
-            <>Fetching projects...</>
-          )}
+          <div id="projects" className="flex flex-col gap-4">
+            {projects.data ? (
+              projects.data
+                ?.slice(0)
+                .reverse()
+                .map((projectItem) => {
+                  return (
+                    <div key={projectItem.id}>
+                      <Card>
+                        <CardHeader>
+                          <CardTitle>{projectItem.title}</CardTitle>
+                          <CardDescription>
+                            {projectItem.desc_short}
+                          </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <p>{projectItem.desc_long}</p>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  );
+                })
+            ) : (
+              <>Fetching projects...</>
+            )}
+          </div>
         </div>
       </main>
     </>

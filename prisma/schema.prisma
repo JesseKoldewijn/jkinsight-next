@@ -12,9 +12,10 @@ datasource db {
 }
 
 model Project {
-    id          String   @id @default(cuid())
-    title       String   @unique
-    description String   @default("Not set")
-    createdAt   DateTime @default(now())
-    updatedAt   DateTime @updatedAt
+    id         String   @id @default(cuid())
+    title      String   @unique
+    desc_short String   @default("Not set")
+    desc_long  String   @default("Not set") @db.VarChar(350)
+    createdAt  DateTime @default(now())
+    updatedAt  DateTime @updatedAt
 }
