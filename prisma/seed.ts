@@ -7,7 +7,7 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function main() {
-  const data = [
+  const projectsData = [
     {
       title: "HardwareHulp",
       desc_short: "Informational website for my own company.",
@@ -24,19 +24,37 @@ async function main() {
 
   const seedDB = async () => {
     await Promise.all(
-      data.map(async (projectItem) => {
-        await prisma.project.upsert({
+      projectsData.map(async (projectItem) => {
+        const existingItem = await prisma.project.findFirst({
           where: {
-            id: v4(),
-          },
-          update: {},
-          create: {
-            id: v4(),
             title: projectItem.title,
-            desc_short: projectItem.desc_short,
-            desc_long: projectItem.desc_long,
           },
         });
+        if (existingItem !== null) {
+          await prisma.project.update({
+            where: {
+              title: projectItem.title,
+            },
+            data: {
+              title: projectItem.title,
+              desc_short: projectItem.desc_short,
+              desc_long: projectItem.desc_long,
+            },
+          });
+        } else {
+          await prisma.project.upsert({
+            where: {
+              id: v4(),
+            },
+            update: {},
+            create: {
+              id: v4(),
+              title: projectItem.title,
+              desc_short: projectItem.desc_short,
+              desc_long: projectItem.desc_long,
+            },
+          });
+        }
       }),
     );
   };
