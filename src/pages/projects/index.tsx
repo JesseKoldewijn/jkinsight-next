@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { type NextPage } from "next";
 import Head from "next/head";
 
@@ -10,15 +11,19 @@ import {
   CardTitle,
 } from "@/components/ui/layout/card";
 
-export const config = {
-  runtime: "experimental-edge",
-  unstable_allowDynamic: [
-    "/node_modules/.pnpm/**", // use a glob to allow anything in the function-bind 3rd party module
-  ],
+const noData = {
+  data: [],
 };
 
 const About: NextPage = () => {
-  const projects = api.projects.getAll.useQuery();
+  const projectsData = api.projects.getAll.useQuery();
+  const [projects, setProjects] = useState<typeof noData | typeof projectsData>(
+    noData,
+  );
+
+  if (projectsData.data && projects == noData) {
+    setProjects(projectsData);
+  }
 
   return (
     <>
