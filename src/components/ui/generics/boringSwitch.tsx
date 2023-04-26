@@ -1,12 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { Label } from "../form/label";
 import { Switch } from "./switch";
 
 const BoringSwitch = () => {
   const [boringEnabled, setBoringEnabled] = useState(false);
 
-  const toggleBoringMode = (e) => {
-    const newState = e.target.dataset.state;
+  const toggleBoringMode = () => {
     setBoringEnabled(!boringEnabled);
   };
 
@@ -14,7 +13,7 @@ const BoringSwitch = () => {
     <div className="hidden items-center space-x-2 sm:flex">
       <Switch
         id="boring-mode"
-        onClick={(e) => toggleBoringMode(e)}
+        onClick={() => toggleBoringMode()}
         data-state={boringEnabled}
       />
       <Label htmlFor="boring-mode">
