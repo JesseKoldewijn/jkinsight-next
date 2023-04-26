@@ -9,6 +9,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/layout/navigation-menu";
+import BoringSwitch from "./generics/boringSwitch";
 
 const Navbar = () => {
   const LinkComponent = ({
@@ -63,8 +64,9 @@ const Navbar = () => {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-      <div className="navbar-end flex">
+      <div className="navbar-end flex gap-2">
         <ThemeSwitch />
+        <BoringSwitch />
       </div>
     </div>
   );
