@@ -1,6 +1,25 @@
+import fs from "fs";
 import { Html, Head, Main, NextScript } from "next/document";
 
 const RootDocument = () => {
+  const mediaArray: string[] = [];
+  const mediaFolder = ".next/static/media";
+  const mediaFolderFallback = "_next/static/media";
+
+  try {
+    fs.readdirSync(mediaFolder).forEach((file) => {
+      if (file.includes(".ttf")) {
+        mediaArray.push(file);
+      }
+    });
+  } catch (e) {
+    fs.readdirSync(mediaFolderFallback).forEach((file) => {
+      if (file.includes(".ttf")) {
+        mediaArray.push(file);
+      }
+    });
+  }
+
   return (
     <Html
       lang="en"
@@ -30,6 +49,22 @@ const RootDocument = () => {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/manifest.webmanifest" />
+        {mediaArray.length > 0 ? (
+          mediaArray.map((file) => {
+            return (
+              <link
+                key={String(file)}
+                as="font"
+                crossOrigin="anonymous"
+                href={mediaFolderFallback + "/" + file}
+                rel="preload"
+                type="font/ttf"
+              />
+            );
+          })
+        ) : (
+          <></>
+        )}
       </Head>
       <body className="overflow-x-hidden">
         <Main />
