@@ -2,10 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("/fonts/JetBrains_Mono_Regular_Nerd_Font_Complete_Mono.ttf");
+
 :root {
   @apply bg-transparent;
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue";
+  --font-jb-mono: "JetBrainsMono Nerd Font Mono";
+  --font-sans: var(--font-jb-mono), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue";
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -13,8 +16,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, "Helvetica Neue";
+    --font-jb-mono: "JetBrainsMono Nerd Font Mono";
+    --font-sans: var(--font-jb-mono), system-ui, -apple-system,
+      BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue";
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
