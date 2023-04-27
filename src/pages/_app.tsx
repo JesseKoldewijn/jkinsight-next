@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 
 import { useEffect } from "react";
 
-import localFont from "next/font/local";
+import { JetBrains_Mono } from "next/font/google";
 import { useRouter } from "next/router";
 
 import { AnimatePresence } from "framer-motion";
@@ -11,8 +11,9 @@ import { AnimatePresence } from "framer-motion";
 import { api } from "@/utils/api";
 import Layout from "@/components/layout";
 
-const JetbrainsMono = localFont({
-  src: "../fonts/JetBrains_Mono_Regular_Nerd_Font_Complete_Mono.ttf",
+const JetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
 
 const RootApp = ({
