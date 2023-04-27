@@ -66,7 +66,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end flex gap-2">
         <ThemeSwitch />
-        <BoringSwitch />
+        {/* <BoringSwitch /> */}
       </div>
     </div>
   );

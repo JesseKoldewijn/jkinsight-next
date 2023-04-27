@@ -18,7 +18,7 @@ async function main() {
       title: "GlitchTech",
       desc_short: "Website showing game development projects in the making",
       desc_long:
-        "Build using WordPress and hosted on my own server. Planning to rebuild this project into Astro.js in the near future.",
+        "Build using WordPress and hosted on my own server. Planning to rebuild this project into Astro.js or Next.js using the app router at some point.",
     },
   ] as const;
 

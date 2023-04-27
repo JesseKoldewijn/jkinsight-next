@@ -5,7 +5,7 @@ const RootDocument = () => {
     <Html
       lang="en"
       data-theme="night"
-      className="transition-all duration-500 ease-in-out"
+      className="transition-all duration-300 ease-in-out"
     >
       <Head>
         <link rel="icon" href="/favicon.ico" />
