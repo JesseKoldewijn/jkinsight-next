@@ -48,11 +48,12 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed inset-x-0 top-0 flex w-full bg-[rgba(200,200,200,0.75)] px-4 py-3 dark:bg-[rgba(0,0,0,0.75)]">
-      <div className="navbar-start flex text-xl">
+    <div className="fixed inset-x-0 top-0 z-[9999] flex w-full bg-[rgba(200,200,200,0.75)] px-4 py-3 dark:bg-[rgba(0,0,0,0.75)]">
+      <div className="navbar-start hidden text-xl lg:flex">
         <LinkComponent Href="/" Title="JKinsight" variantPlain />
       </div>
-      <div className="navbar-center flex gap-2">
+      <div className="navbar-start flex text-xl lg:hidden">mobileNav</div>
+      <div className="navbar-center hidden gap-2 lg:flex">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -64,7 +65,10 @@ const Navbar = () => {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-      <div className="navbar-end flex gap-2">
+      <div className="text-22xl navbar-center flex lg:hidden">
+        <LinkComponent Href="/" Title="JKinsight" variantPlain />
+      </div>
+      <div className="navbar-end mr-0 flex gap-2">
         <ThemeSwitch />
         {/* <BoringSwitch /> */}
       </div>
