@@ -5,7 +5,7 @@ const RootDocument = () => {
     <Html
       lang="en"
       data-theme="night"
-      className="transition-all duration-300 ease-in-out"
+      className="overflow-y-hidden overscroll-y-contain transition-all duration-300 ease-in-out"
     >
       <Head>
         <link rel="icon" href="/favicon.ico" />
@@ -31,7 +31,7 @@ const RootDocument = () => {
         />
         <link rel="manifest" href="/manifest.webmanifest" />
       </Head>
-      <body className="overflow-x-hidden">
+      <body className="h-screen bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[rgba(200,200,200,0.75)] via-gray-400 to-[rgba(200,200,200,0.75)] dark:bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] dark:from-gray-900 dark:via-gray-700 dark:to-gray-600">
         <Main />
         <NextScript />
       </body>

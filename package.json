@@ -36,6 +36,7 @@
     "react-dom": "18.2.0",
     "superjson": "1.12.2",
     "theme-change": "^2.5.0",
+    "@t3-oss/env-nextjs": "^0.2.2",
     "zod": "^3.21.4"
   },
   "devDependencies": {

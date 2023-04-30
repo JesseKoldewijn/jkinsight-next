@@ -1,7 +1,6 @@
-"use client";
-
 import Link from "next/link";
 import ThemeSwitch from "./generics/themeSwitch";
+import { Button } from "./generics/button";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -9,7 +8,16 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/layout/navigation-menu";
-import BoringSwitch from "./generics/boringSwitch";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuItem,
+} from "@radix-ui/react-dropdown-menu";
+import MobileNavbarContent from "./mobileNavbarContent";
+// import BoringSwitch from "./generics/boringSwitch";
 
 const Navbar = () => {
   const LinkComponent = ({
@@ -48,14 +56,19 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed inset-x-0 top-0 z-[9999] flex w-full bg-[rgba(200,200,200,0.75)] px-4 py-3 dark:bg-[rgba(0,0,0,0.75)]">
+    <div className="fixed inset-x-0 top-0 z-[2] flex w-full bg-[rgba(200,200,200,0.75)] px-4 py-3 dark:bg-[rgba(0,0,0,0.75)]">
       <div className="navbar-start hidden text-xl lg:flex">
         <LinkComponent Href="/" Title="JKinsight" variantPlain />
       </div>
-      <div className="navbar-start flex text-xl lg:hidden">mobileNav</div>
+      <div className="navbar-start flex text-xl lg:hidden">
+        <MobileNavbarContent />
+      </div>
       <div className="navbar-center hidden gap-2 lg:flex">
         <NavigationMenu>
           <NavigationMenuList>
+            <NavigationMenuItem>
+              <LinkComponent Href="/" Title="Home" />
+            </NavigationMenuItem>
             <NavigationMenuItem>
               <LinkComponent Href="/projects" Title="Projects" />
             </NavigationMenuItem>
