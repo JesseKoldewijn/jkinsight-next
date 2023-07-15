@@ -1,5 +1,8 @@
-import { type Metadata } from "next";
+import { type ServerRuntime, type Metadata } from "next";
 import React from "react";
+
+export const revalidate = 698000;
+export const runtime: ServerRuntime = "edge";
 
 export const metadata: Metadata = {
   title: "Home",

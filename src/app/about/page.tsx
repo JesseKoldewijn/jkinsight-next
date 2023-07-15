@@ -1,4 +1,4 @@
-import { type NextPage } from "next";
+import { type ServerRuntime, type NextPage } from "next";
 import Head from "next/head";
 
 import MyAvatar from "@/components/avatar";
@@ -9,6 +9,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/layout/card";
+
+export const revalidate = 698000;
+export const runtime: ServerRuntime = "edge";
 
 const About: NextPage = () => {
   const studies = [
