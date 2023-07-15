@@ -7,9 +7,13 @@ import {
   CardContent,
 } from "@/components/ui/layout/card";
 import { getAllProjects } from "@/server/helpers/projects";
+import { type Metadata } from "next";
 
 export const revalidate = 698000;
-export const runtime = "edge";
+
+export const metadata: Metadata = {
+  title: "Projects",
+};
 
 const ProjectsOverview = async () => {
   const projects = await getAllProjects();

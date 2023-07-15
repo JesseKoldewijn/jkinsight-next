@@ -2,7 +2,7 @@ import { type Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Home | JKinsight by Jesse Koldewijn",
 };
 
 const Home = () => {

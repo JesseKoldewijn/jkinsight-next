@@ -1,4 +1,4 @@
-import { type NextPage } from "next";
+import { type Metadata, type NextPage } from "next";
 import Head from "next/head";
 
 import MyAvatar from "@/components/avatar";
@@ -9,6 +9,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/layout/card";
+
+export const metadata: Metadata = {
+  title: "About",
+};
 
 const About: NextPage = () => {
   const studies = [

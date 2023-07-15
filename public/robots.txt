@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://jkinsight.nl
+Host: https://jkinsight-next.vercel.app
