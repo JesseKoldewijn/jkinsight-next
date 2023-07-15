@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://jkinsight.nl
+
+# Sitemaps
+Sitemap: https://jkinsight.nl/sitemap.xml
